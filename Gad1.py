@@ -14,7 +14,7 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 # Radio button for selecting the dataset
 dataset_options = ["United Arab Emirates", "Saudi Arabia", "Egypt", "Iraq", "Morocco"]
-selected_dataset = st.sidebar.radio("Select Dataset", options=dataset_options)
+selected_dataset = st.sidebar.radio("Select Region", options=dataset_options)
 
 # Sidebar range slider for selecting the range of items to display
 range_slider = st.sidebar.slider("Select rank range", 0, 50, (0, 20))
@@ -51,7 +51,7 @@ data.columns = data.columns.str.strip()
 regions = data['Region'].unique()
 
 # Sidebar radio button for selecting the region
-selected_region = st.sidebar.radio("Select Region", options=regions)
+selected_region = st.sidebar.radio("Selected Dataset", options=regions)
 
 # Filter data by selected region
 filtered_data = data[data['Region'] == selected_region]
