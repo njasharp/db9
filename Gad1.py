@@ -111,4 +111,10 @@ else:
 st.header(f'{selected_region}')
 st.markdown("#### Top 50 Matrix")
 st.write(data)
+
+
+data1 = pd.read_csv('extracted_t50uaesort.csv')
+
+st.write("Game Details:")
+st.write(data1)
 st.info("Built by DW v1.2 6-27-24")
