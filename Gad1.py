@@ -13,7 +13,7 @@ hide_menu_style = """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 # Radio button for selecting the dataset
-dataset_options = ["United-Arab-Emirates", "Saudi Arabia", "Egypt", "Iraq", "Morocco"]
+dataset_options = ["United Arab Emirates", "Saudi Arabia", "Egypt", "Iraq", "Morocco"]
 selected_dataset = st.sidebar.radio("Select Dataset", options=dataset_options)
 
 # Sidebar range slider for selecting the range of items to display
