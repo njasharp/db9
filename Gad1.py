@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from PIL import Image
 
 # Hide Streamlit menu and footer
 hide_menu_style = """
@@ -117,4 +118,27 @@ data1 = pd.read_csv('extracted_t50uaesort.csv')
 
 st.write("Game Details:")
 st.write(data1)
-st.info("Built by DW v1.2 6-27-24")
+
+st.write("sources:")
+st.image("appfig.PNG")
+st.markdown("https://appfigures.com")
+# Load your images
+image1 = Image.open("app42.PNG")
+image2 = Image.open("appana.PNG")
+image3 = Image.open("appdai.PNG")
+image4 = Image.open("appfol.PNG")
+# Create two columns
+col1, col2 = st.columns(2)
+
+# Display the images in the respective columns
+with col1:
+    st.image(image1, caption='https://42matters.com', use_column_width=True)
+with col2:
+    st.image(image2, caption='https://app.sensortower.com', use_column_width=True)
+
+with col1:
+    st.image(image3, caption='https://apptopia.com', use_column_width=True)
+with col2:
+    st.image(image4, caption='https://appfollow.io', use_column_width=True)
+
+st.info("Built by DW v1.2 6-28-24")
